@@ -5,8 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HTML_encryptor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="AES ENCRYPTOR" Height="350" Width="525" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFF7FFFF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Grid.Row="0" Background="#FFF0F0FF">
+            <Label FontSize="12" Content="Export html, txt, js files only to encode." Margin="10,10,10,0"/>
+            <TextBox x:Name="txtfile"  Margin="10,10,10,0" Padding="5" IsEnabled="False">
+
+            </TextBox>
+            <Button Content="Open file" Margin="10,10,10,0"  
+                    BorderBrush="Transparent" Click="Btnopen" Background="#FFA8F37D" Cursor="Hand"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="10, 15 , 10 ,10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <Button  Cursor="Hand"
+                         Content="Encrypt"  
+                         Background="DarkCyan"
+                         Foreground="White" 
+                         Grid.Column="0" 
+                         Grid.Row="1" Padding="10" Margin="0,0,5,0" Click="Btnencrypt"/>
+
+                <Button Cursor="Hand"
+                        Content="Decrypt"
+                        Background="Crimson" 
+                        Foreground="White" 
+                        Grid.Column="1" 
+                        Grid.Row="1" 
+                        Padding="10" 
+                        Margin="0,0,5,0"/>
+
+            </Grid>
+
+
+        </StackPanel>
+
     </Grid>
 </Window>
